@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Description>Library provides functionality for connecting and using methods to Weborama API.</Description>
+    <Copyright>Copyright © Wavemaker 2021</Copyright>
+    <Authors>Wavemaker</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.2.0</Version>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageTags>wavemaker weborama api connector wm</PackageTags>
+    <PackageProjectUrl>https://github.com/wm-russia-software/Weborama.Api.Connector</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wm-russia-software/Weborama.Api.Connector</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>F:\Work\2020\Библиотека для работы с Weborama API\Weborama.Api.Connector\Weborama.Api.Connector\Weborama.Api.Connector\Weborama.Api.Connector.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ak.Framework.Core" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.15.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weborama.Api.Connector", "Weborama.Api.Connector\Weborama.Api.Connector.csproj", "{80487FD2-35CC-4799-992A-07EEA4055C71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3B13EE0D-26CB-4204-BB21-9D34F814BEB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weborama.Api.Connector.Tests.App", "Weborama.Api.Connector.Tests.App\Weborama.Api.Connector.Tests.App.csproj", "{13FA3797-5CB3-4B12-BA29-1A2F381CFA8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80487FD2-35CC-4799-992A-07EEA4055C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80487FD2-35CC-4799-992A-07EEA4055C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80487FD2-35CC-4799-992A-07EEA4055C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80487FD2-35CC-4799-992A-07EEA4055C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FA3797-5CB3-4B12-BA29-1A2F381CFA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FA3797-5CB3-4B12-BA29-1A2F381CFA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FA3797-5CB3-4B12-BA29-1A2F381CFA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FA3797-5CB3-4B12-BA29-1A2F381CFA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13FA3797-5CB3-4B12-BA29-1A2F381CFA8E} = {3B13EE0D-26CB-4204-BB21-9D34F814BEB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63FA2446-8FE4-489B-99B2-A425A891A3C3}
+	EndGlobalSection
+EndGlobal

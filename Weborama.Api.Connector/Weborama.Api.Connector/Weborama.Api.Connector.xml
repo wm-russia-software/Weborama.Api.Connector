@@ -1,0 +1,1617 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Weborama.Api.Connector</name>
+    </assembly>
+    <members>
+        <member name="T:Weborama.Api.Connector.AdNetworks">
+            <summary>
+            Класс для работы с рекламным сетями
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.AdNetworks.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdNetworks.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdNetworks.GetAdNetworksList(System.Int32)">
+            <summary>
+            Получение списка рекламных сетей
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdNetworks.GetAdNetworks(System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка рекламных сетей
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.AdSpaces">
+            <summary>
+            Класс для работы с рекламным пространствам
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.AdSpaces.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdSpaces.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdSpaces.GetAdSpacesList(System.Int32)">
+            <summary>
+            Получение списка рекламных пространств
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdSpaces.GetAdSpacesList(System.Int32,System.Int32)">
+            <summary>
+            Получение списка рекламных пространств
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="campaignId">Идентификатор кампании</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdSpaces.GetAdSpaces(System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка рекламных пространств
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="campaignId">Идентификатор кампании</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.AdSpaces.GetAllAdSpaces(System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка всех рекламных пространств
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Authentication">
+            <summary>
+            Класс для работы с аутентификацией
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.Authentication.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.Authentication.#ctor(System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Authentication.GetToken(System.String,System.String)">
+            <summary>
+            Получение токена
+            </summary>
+            <param name="login">Логин</param>
+            <param name="password">Пароль</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.BaseApiHandler">
+            <summary>
+            Базовый обработчик API
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.BaseApiHandler.CommonApiUrl">
+            <summary>
+            Url для доступа к Api
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.BaseApiHandler.ApiUrl">
+            <summary>
+            Url для доступа к Api
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseApiHandler.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseApiHandler.#ctor(System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseApiHandler.AddDefaultHeaders(RestSharp.RestRequest)">
+            <summary>
+            Добавление заголовков запроса по умолчанию
+            </summary>
+            <param name="request">Запроса</param>
+        </member>
+        <member name="T:Weborama.Api.Connector.BaseTokenApiHandler">
+            <summary>
+            Базовый обработчик API
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.BaseTokenApiHandler.AccountId">
+            <summary>
+            Идентификатор аккаунта
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.BaseTokenApiHandler.Token">
+            <summary>
+            Токен
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.AddDefaultHeaders(RestSharp.RestRequest)">
+            <summary>
+            Добавление заголовков запроса по умолчанию
+            </summary>
+            <param name="request">Запрос</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.GetDataFromApi``1(System.String,RestSharp.Method)">
+            <summary>
+            Получение данных из API
+            </summary>
+            <typeparam name="T">Тип</typeparam>
+            <param name="url">Url</param>
+            <param name="verb">Метода получения данных</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.GetDataFromApi(System.String,RestSharp.Method)">
+            <summary>
+            Получение данных из API
+            </summary>
+            <param name="url">Url</param>
+            <param name="verb">Метода получения данных</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.GetStringFormatOfArray(System.Collections.Generic.IEnumerable{System.Enum})">
+            <summary>
+            Получение строкового представления массива 
+            </summary>
+            <param name="items">Элементы</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.BaseTokenApiHandler.GetStringFormatOfArray(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Получение строкового представления массива
+            </summary>
+            <param name="items">Элементы</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Campaigns">
+            <summary>
+            Класс для работы с кампаниями
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Campaigns.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Campaigns.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Campaigns.GetCampaignsList(System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Получение списка кампаний
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="projectId">Идентификатор проекта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Campaigns.GetCampaigns(System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка кампаний
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="projectId">Идентификатор проекта</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Converters.BooleanConverter">
+            <summary>
+            Конвертер в Boolean
+            </summary>
+            <seealso cref="T:Newtonsoft.Json.JsonConverter" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Converters.BooleanConverter.CanConvert(System.Type)">
+            <summary>
+            Determines whether this instance can convert the specified object type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            <c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Converters.BooleanConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Reads the JSON representation of the object.
+            </summary>
+            <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader" /> to read from.</param>
+            <param name="objectType">Type of the object.</param>
+            <param name="existingValue">The existing value of object being read.</param>
+            <param name="serializer">The calling serializer.</param>
+            <returns>
+            The object value.
+            </returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Converters.BooleanConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Writes the JSON representation of the object.
+            </summary>
+            <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter" /> to write to.</param>
+            <param name="value">The value.</param>
+            <param name="serializer">The calling serializer.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:Weborama.Api.Connector.Creatives">
+            <summary>
+            Класс для работы с креативами
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Creatives.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Creatives.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Creatives.GetCreativesList(System.Int32,System.Int32)">
+            <summary>
+            Получение списка креативов
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="insertionId">Идентификатор объекта Sites/Offers</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Creatives.GetCreativesList(System.Int32)">
+            <summary>
+            Получение списка креативов
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Creatives.GetCreatives(System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка креативов
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="insertionId">Идентификатор объекта Sites/Offers</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Creatives.GetAllCreatives(System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка креативов
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Enums.ChannelType">
+            <summary>
+            Тип канала
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.ChannelType.DisplayCampaign">
+            <summary>
+            Display campaign
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.ChannelType.SearchCampaign">
+            <summary>
+            Search campaign
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.ChannelType.AffiliateCampaign">
+            <summary>
+            Affiliate campaign
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.ChannelType.DirectMarketingCampaign">
+            <summary>
+            Direct marketing campaign
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.ChannelType.SelfPromotionCampaign">
+            <summary>
+            Self promotion campaign
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.ChannelType.SocialCampaign">
+            <summary>
+            Social campaign
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Enums.Dimension">
+            <summary>
+            Измерение
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Project">
+            <summary>
+            Project
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Channel">
+            <summary>
+            Channel
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.CampaignLabel">
+            <summary>
+            Campaign Label
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Campaign">
+            <summary>
+            Campaign
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Ad_Space">
+            <summary>
+            AdSpace
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Insertion">
+            <summary>
+            Insertion
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.CreativeLabel">
+            <summary>
+            Creative Label
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Creative">
+            <summary>
+            Creative
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.ConversionPage">
+            <summary>
+            Conversion Page
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Brand_And_Product">
+            <summary>
+            Brand And Product
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Browser">
+            <summary>
+            Browser
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Operating_System">
+            <summary>
+            Operating System
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Device">
+            <summary>
+            Device
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Isp">
+            <summary>
+            Isp
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Cluster">
+            <summary>
+            Cluster
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Age">
+            <summary>
+            Age
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Gender">
+            <summary>
+            Gender
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.SocioDemo">
+            <summary>
+            Socio Demo
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.AdvertiserCountry">
+            <summary>
+            Advertiser Country
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Audience">
+            <summary>
+            Audience
+            </summary>
+        </member>
+        <member name="F:Weborama.Api.Connector.Enums.Dimension.Custom_Event">
+            <summary>
+            Custom Event
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Insertions">
+            <summary>
+            Класс для работы с объектами Sites/Offers
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Insertions.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Insertions.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Insertions.GetInsertionsList(System.Int32,System.Int32)">
+            <summary>
+            Получение списка объектов Sites/Offers
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="campaignId">Идентификатор кампании</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Insertions.GetInsertionsList(System.Int32)">
+            <summary>
+            Получение списка объектов Sites/Offers
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Insertions.GetInsertions(System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка объектов Sites/Offers
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="campaignId">Идентификатор кампании</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Insertions.GetAllInsertions(System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка объектов Sites/Offers
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Metrics">
+            <summary>
+            Класс для работы с метриками
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Metrics.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Metrics.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Metrics.GetMetricsList(System.Int32,System.Collections.Generic.IEnumerable{System.Enum})">
+            <summary>
+            Получение списка рекламных пространств
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="dimensions">Измерения</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.AdNetwork">
+            <summary>
+            Рекламная сеть
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.State">
+            <summary>
+            Статус
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.AdNetworkType">
+            <summary>
+            Тип рекламной сети
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.ThirdPartyPlatform">
+            <summary>
+            Платформа
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.CountryId">
+            <summary>
+            Идентификатор страны
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.Created">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.Updated">
+            <summary>
+            Дата обновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdNetwork.Deleted">
+            <summary>
+            Дата удаления
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.AdSpace">
+            <summary>
+            Рекламное пространство
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.AdSpaceType">
+            <summary>
+            Тип рекламного пространства
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.State">
+            <summary>
+            Состояние
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.ExternalId">
+            <summary>
+            Внешний идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.ExternalName">
+            <summary>
+            Внешнее название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Emails">
+            <summary>
+            Почтовые ящики
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Comments">
+            <summary>
+            Комментарии
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.SiteUrl">
+            <summary>
+            Url сайта
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.BurstPath">
+            <summary>
+            Путь BurstPath
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.BurstType">
+            <summary>
+            Тип BurstType
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.ZIndex">
+            <summary>
+            ZIndex
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.CountryId">
+            <summary>
+            Идентификатор страны
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.AdServerId">
+            <summary>
+            Идентификатор рекламной сервера
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.AdNetworkId">
+            <summary>
+            Идентификатор рекламной сети
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.ChannelTypeId">
+            <summary>
+            Идентификатор типа канала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.ChannelType">
+            <summary>
+            Тип канала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Created">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Updated">
+            <summary>
+            Дата обновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.AdSpace.Deleted">
+            <summary>
+            Дата удаления
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Campaign">
+            <summary>
+            Кампания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Stage">
+            <summary>
+            Этап
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.State">
+            <summary>
+            Статус
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Comments">
+            <summary>
+            Комментарии
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.AgencyId">
+            <summary>
+            Идентификатор агентства
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.ChannelTypeId">
+            <summary>
+            Идентификатор типа канала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.ChannelType">
+            <summary>
+            Тип канала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.ProjectId">
+            <summary>
+            Идентификатор проекта
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.ExternalId">
+            <summary>
+            Внешний идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.ExternalName">
+            <summary>
+            Внешнее название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsVisible">
+            <summary>
+            Признак отображения
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Timezone">
+            <summary>
+            Часовой пояс
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.StartDate">
+            <summary>
+            Дата начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.RealStartDate">
+            <summary>
+            Реальная дата начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.EffectiveStartDate">
+            <summary>
+            Эффективная дата начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.EndDate">
+            <summary>
+            Конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.RealEndDate">
+            <summary>
+            Реальная конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.EffectiveEndDate">
+            <summary>
+            Эффективная конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Created">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Updated">
+            <summary>
+            Дата обновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.Deleted">
+            <summary>
+            Дата удаления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsAutoStartDate">
+            <summary>
+            Признак автоматической даты начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.StopDisplayAfterEndDate">
+            <summary>
+            Признак остановки отображения после конечной даты
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsAutoEndDate">
+            <summary>
+            Признак автозавершения
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.PostClickTrackingDays">
+            <summary>
+            Количество дней отслеживания PostClick
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.PostImpressionTrackingDays">
+            <summary>
+            Количество дней отслеживания PostImpression
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.PostViewTrackingDays">
+            <summary>
+            Количество дней отслеживания PostView
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.PostEventTrackingDays">
+            <summary>
+            Количество дней отслеживания PostEvent
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsObaActivated">
+            <summary>
+            Признак активации OBA
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsVisibleInWam">
+            <summary>
+            Признак видимости в Wam
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.LandingUrl">
+            <summary>
+            Url лендинга
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsVisibilityActivated">
+            <summary>
+            Признак активации видимости
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.IsUrlBuilderActivated">
+            <summary>
+            Признак активации строителя Url
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.BrandAndProductId">
+            <summary>
+            Идентификатор продукта и бренда
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Campaign.HasStatistics">
+            <summary>
+            Признак наличия статистики
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Creative">
+            <summary>
+            Креатив
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.State">
+            <summary>
+            Состояние
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.DistinctCreativeId">
+            <summary>
+            Идентификатор конкретного креатива
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.CreativeFormatId">
+            <summary>
+            Идентификатор формата креатива
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.DistinctAccountId">
+            <summary>
+            Идентификатор конкретного аккаунта
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.LiveCreativeVersionId">
+            <summary>
+            Идентификатор live версии креатива
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.LatestCreativeVersionId">
+            <summary>
+            Идентификатор последней версии креатива
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.AdPositionIds">
+            <summary>
+            Идентификаторы позиции
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.FolderId">
+            <summary>
+            Идентификатор папки
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.IsAdCms">
+            <summary>
+            Признак наличия в CMS
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.PreviewerLabel">
+            <summary>
+            Метка предпросмотра
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.IsDco">
+            <summary>
+            Признак DCO
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.LiveAutoupdate">
+            <summary>
+            Признак включения live автообновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.Settings">
+            <summary>
+            Настройки
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.Created">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.Updated">
+            <summary>
+            Дата обновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.Deleted">
+            <summary>
+            Дата удаления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Creative.HasStatistics">
+            <summary>
+            Признак наличия статистики
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.DataContainer`1">
+            <summary>
+            Контейнер данных
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.DataContainer`1.StartIndex">
+            <summary>
+            Начальное значение
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.DataContainer`1.ItemsPerPage">
+            <summary>
+            Количество элементов на странице
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.DataContainer`1.Total">
+            <summary>
+            Количество элементов
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.DataContainer`1.Values">
+            <summary>
+            Элементы
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Insertion">
+            <summary>
+            Объект уровня Site/Offer
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.AdNetworkId">
+            <summary>
+            Идентификатор рекламной сети
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.AdSpaceId">
+            <summary>
+            Идентификатор рекламного пространства
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.CampaignId">
+            <summary>
+            Идентификатор кампании
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Stage">
+            <summary>
+            Этап
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.State">
+            <summary>
+            Состояние
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Priority">
+            <summary>
+            Приоритет
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.OptimizationLevel">
+            <summary>
+            Уровень оптимизации
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Comments">
+            <summary>
+            Комментарии
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.StartDate">
+            <summary>
+            Дата начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.RealStartDate">
+            <summary>
+            Реальная дата начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.EffectiveStartDate">
+            <summary>
+            Эффективная дата начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.EndDate">
+            <summary>
+            Конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.RealEndDate">
+            <summary>
+            Реальная конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.EffectiveEndDate">
+            <summary>
+            Эффективная конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Created">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Updated">
+            <summary>
+            Дата обновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.Deleted">
+            <summary>
+            Дата удаления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.ClickTag">
+            <summary>
+            Признак ClickTag
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.OptimizationType">
+            <summary>
+            Тип оптимизации
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.LandingUrl">
+            <summary>
+            Url лендинга
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.HasManyPlacements">
+            <summary>
+            Признак наличия большого количество размещений
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.DeliveryFormatId">
+            <summary>
+            Идентификатор формата доставки
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.IsPublisherPaid">
+            <summary>
+            Признак того, что оплачивается публикующим
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.IsBid">
+            <summary>
+            Признак BID
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.PlacementGroupId">
+            <summary>
+            Идентификатор группы размещения
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.EnableOptimization">
+            <summary>
+            Признак включения оптимизации
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.IsAutoStartDate">
+            <summary>
+            Признак автоматической даты начала
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.StopDisplayAfterEndDate">
+            <summary>
+            Признак остановки отображения после конечной даты
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.IsAutoEndDate">
+            <summary>
+            Признак автозавершения
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Insertion.HasStatistics">
+            <summary>
+            Признак наличия статистики
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Metric">
+            <summary>
+            Метрика
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.ShortName">
+            <summary>
+            Краткое название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.HumanName">
+            <summary>
+            Человекочитабельное название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.AccountId">
+            <summary>
+            Идентификатор аккаунта
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.StaticMetricId">
+            <summary>
+            Идентификатор статической метрики
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.MetricType">
+            <summary>
+            Тип метрики
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.AverageCompute">
+            <summary>
+            Признак возможности вычисления среднего
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.Value">
+            <summary>
+            Значение
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.Rule">
+            <summary>
+            Правило
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.DisplayType">
+            <summary>
+            Отображаемый тип
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.Formula">
+            <summary>
+            Формула
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Metric.AlternativeFormula">
+            <summary>
+            Альтернативная формула
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Project">
+            <summary>
+            Проект
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.IsVisible">
+            <summary>
+            Признак отображения проекта
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.IsYandex">
+            <summary>
+            Признак принадлежности к Yandex
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.State">
+            <summary>
+            Статус
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.Created">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.Updated">
+            <summary>
+            Дата обновления
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Project.Deleted">
+            <summary>
+            Дата удаления
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem">
+            <summary>
+            Базовый класс для элемента статистического отчета
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.StartDate">
+            <summary>
+            Начальная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.EndDate">
+            <summary>
+            Конечная дата
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.Campaign">
+            <summary>
+            Кампания
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.AdSpace">
+            <summary>
+            Рекламное пространство
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.Insertion">
+            <summary>
+            Элемент Sites/Offers
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.Creative">
+            <summary>
+            Креатив
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.Models.Statistics.BaseStatisticsItem.#ctor(System.DateTime,System.DateTime,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <param name="campaign">Кампания</param>
+            <param name="adSpace">Рекламное пространство</param>
+            <param name="insertion">Элемент Sites/Offers</param>
+            <param name="creative">Креатив</param>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Statistics.EventsStatisticsItem">
+            <summary>
+            Элемент статистического отчета по событиям
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.EventsStatisticsItem.Events">
+            <summary>
+            События
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.Models.Statistics.EventsStatisticsItem.#ctor(System.DateTime,System.DateTime,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,System.Collections.Generic.Dictionary{System.String,System.Nullable{System.Decimal}})">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <param name="campaign">Кампания</param>
+            <param name="adSpace">Рекламное пространство</param>
+            <param name="insertion">Элемент Sites/Offers</param>
+            <param name="creative">Креатив</param>
+            <param name="events">События</param>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Statistics.GeneralStatisticsItem">
+            <summary>
+            Элемент общего статистического отчета
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.GeneralStatisticsItem.Metrics">
+            <summary>
+            Метрики
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.Models.Statistics.GeneralStatisticsItem.#ctor(System.DateTime,System.DateTime,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Item,Weborama.Api.Connector.Models.Statistics.Metrics)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <param name="campaign">Кампания</param>
+            <param name="adSpace">Рекламное пространство</param>
+            <param name="insertion">Элемент Sites/Offers</param>
+            <param name="creative">Креатив</param>
+            <param name="metrics">Метрики</param>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Statistics.Item">
+            <summary>
+            Элемент
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Item.Id">
+            <summary>
+            Идентификатор
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Item.Name">
+            <summary>
+            Название
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.Models.Statistics.Item.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="id">Идентификатор</param>
+            <param name="name">Название</param>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Statistics.Metrics">
+            <summary>
+            Класс-контейнер для метрик
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.Clicks">
+            <summary>
+            Клики
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.Impressions">
+            <summary>
+            Показы
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.UniqueClicks">
+            <summary>
+            Уникальные клики
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.UniqueImpressions">
+            <summary>
+            Уникальные показы
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.ConversionsInLessThan60Minutes">
+            <summary>
+            Количество конверсий меньше, чем за 60 минут
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.ClicksConversionRate">
+            <summary>
+            Процент конверсии кликов
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Statistics.Metrics.ImpressionsConversionRate">
+            <summary>
+            Процент конверсии показов
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Models.Token">
+            <summary>
+            Токен
+            </summary>
+        </member>
+        <member name="P:Weborama.Api.Connector.Models.Token.JwtToken">
+            <summary>
+            JWT токен
+            </summary>
+        </member>
+        <member name="T:Weborama.Api.Connector.Projects">
+            <summary>
+            Класс для работы с проектами
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Projects.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Projects.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Projects.GetProjectsList(System.Int32)">
+            <summary>
+            Получение списка проектов
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Projects.GetProjects(System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Получение списка проектов
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="limit">Максимальное количество возвращаемых записей</param>
+            <param name="offset">Сдвиг на заданное количество записей</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.Statistics">
+            <summary>
+            Класс для работы со статистикой
+            </summary>
+            <seealso cref="T:Weborama.Api.Connector.BaseTokenApiHandler" />
+        </member>
+        <member name="M:Weborama.Api.Connector.Statistics.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Statistics.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="apiUrl">Url для доступа к Api</param>
+            <param name="clientId">Идентификатор клиента</param>
+            <param name="token">Токен</param>
+        </member>
+        <member name="M:Weborama.Api.Connector.Statistics.GetStatistics(System.Int32,System.DateTime,System.DateTime,System.Collections.Generic.IEnumerable{System.Enum},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Получение статистического отчета
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <param name="dimensions">Измерения</param>
+            <param name="metrics">Метрики</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Statistics.GetGeneralStatistics(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Получение общего статистического отчета
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weborama.Api.Connector.Statistics.GetEventsStatistics(System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            Получение статистического отчета по событиям
+            </summary>
+            <param name="accountId">Идентификатор аккаунта</param>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.StatisticsResultsConverters.BaseStatisticsResultsConverter">
+            <summary>
+            Конвертер результатов статистического отчета по событиям
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.StatisticsResultsConverters.BaseStatisticsResultsConverter.GetMetadataItems(Newtonsoft.Json.Linq.JObject,Weborama.Api.Connector.Enums.Dimension)">
+            <summary>
+            Получение элементов из метаданных
+            </summary>
+            <param name="obj">Объект</param>
+            <param name="dimension">Измерение</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.StatisticsResultsConverters.EventsStatisticsResultsConverter">
+            <summary>
+            Конвертер результатов статистического отчета по событиям
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.StatisticsResultsConverters.EventsStatisticsResultsConverter.Convert(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Преобразование json в список элементов статистического отчета
+            </summary>
+            <param name="json">json</param>
+            <param name="reportStartDate">Начальная дата отчета</param>
+            <param name="reportEndDate">Конечная дата отчета</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weborama.Api.Connector.StatisticsResultsConverters.GeneralStatisticsResultsConverter">
+            <summary>
+            Конвертер результатов общего статистического отчета
+            </summary>
+        </member>
+        <member name="M:Weborama.Api.Connector.StatisticsResultsConverters.GeneralStatisticsResultsConverter.Convert(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Преобразование json в список элементов статистического отчета
+            </summary>
+            <param name="json">json</param>
+            <param name="reportStartDate">Начальная дата отчета</param>
+            <param name="reportEndDate">Конечная дата отчета</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
